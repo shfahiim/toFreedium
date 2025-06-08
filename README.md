@@ -33,10 +33,14 @@ A Chrome/Firefox browser extension that redirects Medium articles and other payw
 2. Click the toFreedium extension icon in your browser toolbar
 3. A new tab will open with the page content via Freedium
 
+![Extension Icon Usage](assets/extension_icon.jpg)
+
 ### Method 2: Context Menu
 1. Right-click on any link or anywhere on a webpage
 2. Select "Open with Freedium" from the context menu
 3. A new tab will open with the content via Freedium
+
+![Right Click Context Menu](assets/right_click.png)
 
 ## How It Works
 
@@ -50,8 +54,11 @@ https://freedium.cfd/[encoded-url]
 ```
 ├── manifest.json      # Extension configuration and permissions
 ├── background.js      # Service worker handling clicks and context menu
-├── icon.png          # Extension icon (16x16, 32x32, 48x48, 128x128)
-└── README.md         # This documentation file
+├── README.md         # This documentation file
+└── assets/           # Image assets
+    ├── icon.png      # Extension icon (16x16, 32x32, 48x48, 128x128)
+    ├── extension_icon.jpg  # Screenshot showing extension icon usage
+    └── right_click.png     # Screenshot showing context menu usage
 ```
 
 ## Permissions
