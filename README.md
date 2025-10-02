@@ -49,17 +49,6 @@ The extension captures the URL of the current page or clicked link, encodes it, 
 https://freedium.cfd/[encoded-url]
 ```
 
-## File Structure
-
-```
-├── manifest.json      # Extension configuration and permissions
-├── background.js      # Service worker handling clicks and context menu
-├── README.md         # This documentation file
-└── assets/           # Image assets
-    ├── icon.png      # Extension icon (16x16, 32x32, 48x48, 128x128)
-    ├── extension_icon.jpg  # Screenshot showing extension icon usage
-    └── right_click.png     # Screenshot showing context menu usage
-```
 
 ## Permissions
 
@@ -67,14 +56,4 @@ The extension requires minimal permissions:
 - `tabs`: To access the current tab's URL and create new tabs
 - `contextMenus`: To add the right-click context menu option
 
-## Technical Details
-
-- **Manifest Version**: 3 (latest Chrome extension standard)
-- **Background Script**: Service worker for handling user interactions
-- **No content scripts**: Minimal footprint and maximum privacy
-- **No data collection**: The extension doesn't store or transmit any user data
-
-## Browser Compatibility
-
-- ✅ Chromium-based browsers (Chrome, Edge, Brave)
 

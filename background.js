@@ -29,15 +29,25 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
       targetUrl = tab.url;
     }
     
-    const encodedUrl = encodeURIComponent(targetUrl);
-    const newUrl = `https://freedium.cfd/${encodedUrl}`;
-    chrome.tabs.create({ url: newUrl });
+    // Only proceed if the URL contains "medium.com"
+    if (targetUrl && targetUrl.includes("medium.com")) {
+      const encodedUrl = encodeURIComponent(targetUrl);
+      const newUrl = `https://freedium.cfd/${encodedUrl}`;
+      chrome.tabs.create({ url: newUrl });
+    } else {
+      console.log("URL does not contain medium.com, skipping forwarding");
+    }
   }
 });
 
 // Keep the existing click handler for the extension icon
 chrome.action.onClicked.addListener((tab) => {
-  const currentUrl = encodeURIComponent(tab.url);
-  const newUrl = `https://freedium.cfd/${currentUrl}`;
-  chrome.tabs.create({ url: newUrl });
+  // Only proceed if the URL contains "medium.com"
+  if (tab.url && tab.url.includes("medium.com")) {
+    const currentUrl = encodeURIComponent(tab.url);
+    const newUrl = `https://freedium.cfd/${currentUrl}`;
+    chrome.tabs.create({ url: newUrl });
+  } else {
+    console.log("URL does not contain medium.com, skipping forwarding");
+  }
 });
