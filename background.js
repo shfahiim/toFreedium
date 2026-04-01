@@ -45,7 +45,7 @@ chrome.action.onClicked.addListener((tab) => {
   // Only proceed if the URL contains "medium.com"
   if (tab.url && tab.url.includes("medium.com")) {
     const currentUrl = encodeURIComponent(tab.url);
-    const newUrl = `https://freedium.cfd/${currentUrl}`;
+    const newUrl = `https://freedium-mirror.cfd/${currentUrl}`;
     chrome.tabs.create({ url: newUrl });
   } else {
     console.log("URL does not contain medium.com, skipping forwarding");
