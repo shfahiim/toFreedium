@@ -10,7 +10,7 @@ A Chrome/Firefox browser extension that redirects Medium articles and other payw
 
 ## What is Freedium?
 
-[Freedium](https://freedium.cfd/) is a free service that bypasses paywalls on various websites, particularly Medium articles. This extension provides a convenient way to access Freedium without manually copying and pasting URLs.
+[Freedium](https://freedium-mirror.cfd/) is a free service that bypasses paywalls on various websites, particularly Medium articles. This extension provides a convenient way to access Freedium without manually copying and pasting URLs.
 
 ## Installation
 
@@ -46,7 +46,7 @@ A Chrome/Firefox browser extension that redirects Medium articles and other payw
 
 The extension captures the URL of the current page or clicked link, encodes it, and redirects to:
 ```
-https://freedium.cfd/[encoded-url]
+https://freedium-mirror.cfd/[encoded-url]
 ```
 
 
